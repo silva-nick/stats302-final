@@ -1,15 +1,30 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Stats 304</title>
-</head>
-<body> 
-    <form method='POST'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" value="submit">Submit</button>
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'main.css' %}" />
+        <title>Stats 304: Form</title>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <form method="POST">
+                    <h2>Search for a live tweet!</h2>
+                    {% csrf_token %} {{ form.as_p }}
+                    <center>
+                        <button
+                            type="submit"
+                            value="submit"
+                            class="res"
+                            style="background-color: #8fa9ff"
+                        >
+                            Submit
+                        </button>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </body>
 </html>

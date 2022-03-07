@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stats304: result</title>
-</head>
-<body>
-    <h2>Tweet: {{data}}</h2>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'main.css' %}" />
+        <title>Stats304: Result</title>
+    </head>
+    <body>
+            <div class="card">
+                <div class="container">
+                    <h2>Tweet: </h3>
+                    <h3>{{tweet}}</h4>
+                    <br/>
+                    <center>
+                        <div class="res" style="background-color:{{color}};">{{status}}</div>
+                    </center>   
+                </div>
+            </div>
+    </body>
 </html>
